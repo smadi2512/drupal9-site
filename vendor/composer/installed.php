@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-development',
+        'version' => 'dev-development',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'f8d148374d98c8ac00fef3742d00b9d64e058db0',
         'name' => 'drupal-composer/drupal-project',
         'dev' => true,
     ),
@@ -323,12 +323,12 @@
             'dev_requirement' => false,
         ),
         'drupal-composer/drupal-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-development',
+            'version' => 'dev-development',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'f8d148374d98c8ac00fef3742d00b9d64e058db0',
             'dev_requirement' => false,
         ),
         'drupal/action' => array(
@@ -336,6 +336,15 @@
             'replaced' => array(
                 0 => '9.3.9',
             ),
+        ),
+        'drupal/admin_toolbar' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/admin_toolbar',
+            'aliases' => array(),
+            'reference' => '3.1.0',
+            'dev_requirement' => false,
         ),
         'drupal/adminimal_theme' => array(
             'pretty_version' => '1.6.0',
