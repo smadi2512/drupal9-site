@@ -1,0 +1,4 @@
+name: offer
+type: module
+description: Offer Entity
+core_version_requirement: ^9
