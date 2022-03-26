@@ -40,6 +40,9 @@ use phpDocumentor\Reflection\PseudoTypes\True_;
  *     "revision_created" = "revision_timestamp",
  *     "revision_log_message" = "revision_log"
  *   },
+ *   handlers = {
+ *    "access" = "Drupal\offer\OfferAccessControlHandler",
+ *   },
  * )
  */
 
@@ -124,4 +127,33 @@ class Offer extends EditorialContentEntityBase {
 
     return $fields;
   }
+
+  /** 
+   * @inheritDoc
+   * Make the current user the owner of the entity
+   *  
+  */
+  public static function preCreate(EntityStorageInterface $storage, array &$values) {
+    parent::preCreate($storage, $values);
+
+    $values += array(
+      'user_id' => \Drupal::currentUser()->id(),
+    );
+
+  }
+
+  /**
+   * @inheritDoc
+   */
+  public function getOwner() {
+    return $this->get('user_id')->entity;
+  }
+  
+  /**
+   * @inheritDoc
+   */
+  public function getOwnerId() {
+    return $this->get('user_id')->target_id;
+  }
+  
 }
