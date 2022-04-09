@@ -42,7 +42,20 @@ use phpDocumentor\Reflection\PseudoTypes\True_;
  *   },
  *   handlers = {
  *    "access" = "Drupal\offer\OfferAccessControlHandler",
+ *     "form" = {
+ *        "add" = "Drupal\offer\Form\OfferForm",
+ *        "edit" = "Drupal\offer\Form\OfferForm",
+ *        "delete" = "Drupal\offer\Form\OfferDeleteFrom"
+ *      }
  *   },
+ *   links = {
+ *      "canonical" = "/offers/{offer}",
+ *      "delete-form" = "/offers/{offer}/delete",
+ *      "edit-form" = "/offers/{offer}/edit",
+ *      "add-form" = "/offers/create",
+ *    
+ * 
+ *  },
  * )
  */
 
